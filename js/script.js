@@ -153,29 +153,62 @@
 
 // console.log(result)
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-const personalMovieDB = {
-    count : numberOfFilms,
-    movies:{},
-    actors:{},
-    genres:[],
-    privat : false
-};
-for(let i = 0; i < 2; i++){
+// const personalMovieDB = {
+//     count : numberOfFilms,
+//     movies:{},
+//     actors:{},
+//     genres:[],
+//     privat : false
+// };
+// for(let i = 0; i < 2; i++){
         
-       const  a = [prompt('Один из последних просмотренных фильмов?', '')],
-            b = prompt('На склолько оцените его', '');
-       if(a != null && b != null && a != '' && b != '' && a.length < 5 ){
-        personalMovieDB[a] = b;
-        console.log(a.length);
-       }
-       else{
-        i--;
-        console.log('Feald');
-       }
+//        const  a = prompt('Один из последних просмотренных фильмов?', ''),
+//             b = prompt('На склолько оцените его', '');
+//         if (a != null && b != null && a != '' && b != '' && a.length < 5){
+//         personalMovieDB.movies[a] = b;
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
+// }
+
+// console.log(personalMovieDB);
+
+
+
+
+// function sayHello(name){
+//     let hello = 'Hello';
+//     hello += ' ' + name;
+//     return hello;
+// }
+// console.log( sayHello('Evgeny'));
+
+// function returnNeighboringNumber(num){
+//     let newNum = [];
+//     let j = -1;
+//     for(let i = 0; i < 3; i++){
+//         newNum[i] = num + j;
+//         j++;
+//     }
+//     return newNum;
+// }
+// console.log(returnNeighboringNumber(-5));
+
+function getMathResult(num, mult){
+    let newNum = '';
+    if(typeof mult === 'string' || mult <= 0){
+        newNum = num;
+        return newNum;
+    }
+    for(let i = 1; i <= mult; i++){
+        newNum += num * i;
+        if(i != mult){
+            newNum +='---';
+        }   
+    } 
+    return newNum;
 }
-
-console.log(personalMovieDB);
-
-
+console.log(getMathResult(3, 10));
